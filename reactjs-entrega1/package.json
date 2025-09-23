@@ -1,12 +1,13 @@
 {
-  "name": "curso-reactjs",
-  "private": true,
-  "version": "0.0.1",
-  "type": "module",
+  "name": "reactjs-entrega1",
+  "version": "0.0.0",
+  "homepage": "https://iivannz.github.io/reactjs-entrega1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 5173"
+    "preview": "vite preview --port 5173",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -14,8 +15,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
+    "gh-pages": "^6.3.0",
     "vite": "^5.4.8"
   }
 }
-
-
