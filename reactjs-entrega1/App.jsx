@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './Navbar';
-import ItemListContainer from './ItemListconteiner';
+import ItemListContainer from './ItemListConteiner';
 
 function App() {
   return (
@@ -12,3 +12,4 @@ function App() {
 }
 
 export default App;
+

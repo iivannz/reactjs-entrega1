@@ -1,71 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RestoApp - Tu Restaurante Online</title>
-    <meta name="description" content="RestoApp - Pedidos online de comida deliciosa">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="RestoApp - Pedidos online de comida deliciosa" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  </head>
+  <body>
     <div id="root"></div>
-    
-    <!-- React y ReactDOM desde CDN -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    
-    <!-- Componentes inline para evitar problemas de CORS -->
-    <script type="text/babel">
-        // CartWidget Component
-        const CartWidget = () => {
-            return React.createElement('div', { className: 'cart-widget' },
-                React.createElement('span', { className: 'cart-icon' }, '🛒'),
-                React.createElement('span', { className: 'cart-count' }, '0')
-            );
-        };
-
-        // NavBar Component
-        const NavBar = () => {
-            return React.createElement('nav', { className: 'navbar' },
-                React.createElement('div', { className: 'navbar-container' },
-                    React.createElement('div', { className: 'navbar-logo' },
-                        React.createElement('h2', null, '🍽️ RestoApp')
-                    ),
-                    React.createElement('div', { className: 'navbar-links' },
-                        React.createElement('a', { href: '#home' }, 'Home'),
-                        React.createElement('a', { href: '#categorias' }, 'Categorías'),
-                        React.createElement('a', { href: '#contacto' }, 'Contacto'),
-                        React.createElement('a', { href: '#nosotros' }, 'Nosotros')
-                    ),
-                    React.createElement('div', { className: 'navbar-cart' },
-                        React.createElement(CartWidget, null)
-                    )
-                )
-            );
-        };
-
-        // ItemListContainer Component
-        const ItemListContainer = ({ greeting }) => {
-            return React.createElement('div', { className: 'item-list-container' },
-                React.createElement('h1', null, greeting)
-            );
-        };
-
-        // App Component
-        const App = () => {
-            return React.createElement('div', { className: 'App' },
-                React.createElement(NavBar, null),
-                React.createElement(ItemListContainer, { greeting: 'Hola mundo' })
-            );
-        };
-
-        // Renderizar la app
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(React.createElement(App, null));
-    </script>
-</body>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
